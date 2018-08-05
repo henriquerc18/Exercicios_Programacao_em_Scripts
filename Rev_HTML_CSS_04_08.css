@@ -1,0 +1,28 @@
+	.background_1 {
+		background: orange;
+		width: 1366px;
+		height: 150px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	
+	.background_2 {
+		background: gray;
+		width: 453px;
+		height: 335px;
+		position: absolute;
+		top: 150px;
+		right: 0px;
+	}
+	
+	.background_3 {
+		background: black;
+		width: 1366px;
+		height: 150px;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	}
+	
+		
