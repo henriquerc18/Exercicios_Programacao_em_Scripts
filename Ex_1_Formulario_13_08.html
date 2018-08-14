@@ -1,0 +1,43 @@
+<!-- Escola Técnica Santo Inácio - 2018/2 -->
+<!-- Ex. 1 - Formulário HTML -->
+<!-- Nome: Henrique Rosa Carvalho -->
+<!-- Data: 13/08/2018 -->
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Henrique Rosa Carvalho" />
+		<meta name="description" content="Formulário, Exercicio 1" />
+		<meta name="keywords" content="Formulário, Exercicio 1" />
+		<title> Nome, sexo e escolaridade </title>
+		<link rel="stylesheet" type="text/css" href="Ex_1_Formulario_13_08.css" />
+	</head>
+	<body>
+		<form action="" method="post" name="Ex_1_Formulario"> 
+			<fieldset>
+				<legend> Nome, sexo e escolaridade </legend>
+				<table> 
+					<tr>
+						<td> Nome: </td>
+						<td> <input type="text" name="nomeCompleto"/> </td>
+					</tr>
+					<tr>
+						<td> Sexo: </td>
+						<td> <input type="radio" name="sexo" value="feminino" checked="checked"/> Feminino <input type="radio" name="sexo" value="masculino"/> Masculino </td>
+					</tr>
+					<tr> 
+						<td colspan=2> Escolaridade: 
+							<select name="escolaridade" id="escolaridade" </td> 
+								<option value="1_Grau"> 1º Grau </option>
+								<option value="2_Grau"> 2º Grau </option>
+								<option value="Superior"> Superior </option>
+							</select>
+						</td>
+						
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</body>
+</html>
