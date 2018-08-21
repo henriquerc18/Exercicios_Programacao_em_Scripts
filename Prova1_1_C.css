@@ -1,0 +1,17 @@
+.bg1 {
+	background: blue;
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 0px;
+	left: 0px;
+}
+
+.bg2 {
+	background: black;
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	bottom: 0px;
+	left: 0px;
+}

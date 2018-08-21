@@ -1,0 +1,54 @@
+<!-- Escola Técnica Santo Inácio - 2018/2 -->
+<!-- Ex. 3 - PROVA 1 -->
+<!-- Nome: Henrique Rosa Carvalho -->
+<!-- Data: 20/08/2018 -->
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title> Escola Virtual </title>
+	</head>
+	<body>
+		<h1 style="text-align: center;"> Escola Virtual </h1>
+		<h2 style="text-align: center;"> Formulário de Pré-Matrícula </h2>
+		<form action="" method="post" name="Dados Pessoais">
+			<fieldset>
+				<p> <b> Dados pessoais: </b> </p>
+				
+				<p> Nome do Aluno: <input type="text" name="Nome_do_Aluno" /> </p>
+				<p> Nascimento (dd/mm/aaaa): <input type="text" name="Nascimento" /> </p>
+				<p> Nome da mãe: <input type="text" name="Nome_Mae" /> </p>
+				<p> Nome do pai: <input type="text" name="Nome_Pai" /> </p>
+				<p> Telefone: DDD ( <input type="text" name="DDD" /> ) Tel: <input type="text" name="Telefone" /> Ramal: <input type="text" name="Ramal" /></p>
+				<p> Email: <input type="text" name="Email" /> </p>
+			</fieldset>
+			<fieldset>
+			<p> <b> Informações de Matrícula: </b> </p>
+				<p> Série: </p>
+				<select name="Série" id="serie" </td> 
+					<option value="pre_escolar"> pré-escolar </option>
+				</select>
+									
+				<p> Turno: </p>
+				<input type="radio" name="turno" value="manha" checked="checked"/> Manhã <br> 
+				<input type="radio" name="turno" value="tarde"/> Tarde 
+				
+				<p> Atividades Extracurriculares: </p>
+				<input type="checkbox" name="atividades_extra" id="informatica" value="informatica"/> Informática 
+				<input type="checkbox" name="atividades_extra" id="musica" value="musica"/> Música
+				<input type="checkbox" name="atividades_extra" id="ballet" value="ballet"/> Ballet 
+				<input type="checkbox" name="atividades_extra" id="pintura" value="pintura"/> Pintura 
+				<input type="checkbox" name="atividades_extra" id="judo" value="judo"/> Judô
+				<input type="checkbox" name="atividades_extra" id="futebol" value="futebol"/> Futebol 
+				
+			</fieldset>		
+			
+			<br>
+			
+			<input type="submit" name="botaoEnviarFormulario" value="Enviar Formulário"/>
+			<input type="Reset" name="botaoLimparFormulario" value="Limpa Campos"/>
+			
+		</form>
+	</body>
+</html>
