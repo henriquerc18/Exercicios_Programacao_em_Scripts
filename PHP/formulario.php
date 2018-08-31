@@ -1,3 +1,9 @@
+<!-- Escola Técnica Santo Inácio - 2018/2 -->
+<!-- Ex. 1 - Formulário PHP -->
+<!-- Nome: Henrique Rosa Carvalho -->
+<!-- Data: 27/08/2018 -->
+
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title> Aula 03 - Exercício 01 </title>
