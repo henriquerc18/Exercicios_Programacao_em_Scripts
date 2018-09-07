@@ -14,7 +14,7 @@
 				private $nomeContribuinte;
 				private $valorSalario;
 				
-				public Imposto(){
+				public function Imposto(){
 				
 				}
 				
@@ -34,16 +34,16 @@
 					$this->valorSalario = $valorSalario;
 				}
 				
-				function calcularSalario(){
-					$valorDesconto = 0;
-					if($ValorSalario <= 900){
+				public function calcularSalario(){					
+					$this->valorDesconto = 0;
+					if($this->valorSalario<=900){						
 						echo "Isento do Imposto de Renda! <br>";
-					}else if($valorSalario > 900 && <= 1800){
-						$valorDesconto = $valorSalario - $valorSalario * 0.15;
-						echo "O valor do imposto de renda com desconto é: R$ ".$valorDesconto. "<br>";
-					}else if($valorSalario > 1800){
-						$valorDesconto = $valorSalario - $valorSalario * 0.27;
-						echo "O valor do imposto de renda com desconto é: R$ ".$valorDesconto.;
+					}else if($this->valorSalario >900 && $this->valorSalario<= 1800){
+						$this->valorDesconto = $this->valorSalario - ($this->valorSalario * 0.15);
+						echo "O valor do imposto de renda com desconto é: R$ ".$this->valorDesconto. "<br>";
+					}else if($this->valorSalario > 1800){
+						$this->valorDesconto = $this->valorSalario - ($this->valorSalario * 0.27);
+						echo "O valor do imposto de renda com desconto é: R$ ".$this->valorDesconto;
 					}
 				}
 			}

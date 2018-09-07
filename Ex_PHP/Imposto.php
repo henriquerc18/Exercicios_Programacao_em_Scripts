@@ -10,7 +10,7 @@
 	<body>
 		<?php
 			include_once 'Imposto.class.php';
-			
+			echo "********************";
 			$imposto = new Imposto();
 			
 			$imposto->setNomeContribuinte($_POST['txtNome']);
