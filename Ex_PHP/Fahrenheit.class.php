@@ -11,7 +11,7 @@
 		<?php
 			class Fahrenheit {
 				
-				private $tempCelsius;
+				private $tempCelsius = 0;
 				
 				public function Fahrenheit(){
 				
@@ -26,7 +26,7 @@
 				}
 				
 				function calcularFahrenheit(){
-					$tempFahrenheit = (9 * tempCelsius + 160)/5;
+					return (9 * $this->tempCelsius + 160)/5;
 				}
 			}
 		?>

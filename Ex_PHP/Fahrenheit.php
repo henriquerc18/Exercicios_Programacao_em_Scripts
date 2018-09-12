@@ -15,7 +15,9 @@
 			
 			$fahrenheit->setTempCelsius($_POST['txtNum1']);
 			
-			echo "A temperatura em graus Celsius é de: ".$calcularFahrenheit. "<br>";
+			
+			echo "A temperatura em graus Fahrenheit é de: ". $fahrenheit->calcularFahrenheit(). "<br>";
+
 		?>
 		
 	</body>
