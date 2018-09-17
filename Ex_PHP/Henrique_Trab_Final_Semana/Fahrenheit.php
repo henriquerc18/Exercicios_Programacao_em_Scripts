@@ -9,15 +9,15 @@
 	</head>
 	<body>
 		<?php
-			include_once 'Idade.class.php';
+			include_once 'Fahrenheit.class.php';
 			
-			$idade = new Idade();
+			$fahrenheit = new Fahrenheit();
 			
-			$idade->setAno($_POST['txtNum1']);
-			$idade->setMes($_POST['txtNum2']);
-			$idade->setDia($_POST['txtNum3']);
+			$fahrenheit->setTempCelsius($_POST['txtNum1']);
 			
-			echo "A idade em dias é de: ".$idade->calcularDias(). "<br>";
+			
+			echo "A temperatura em graus Fahrenheit é de: ". $fahrenheit->calcularFahrenheit(). "<br>";
+
 		?>
 		
 	</body>

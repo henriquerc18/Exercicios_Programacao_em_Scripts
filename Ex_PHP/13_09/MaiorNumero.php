@@ -11,7 +11,7 @@
 		<?php
 			include_once 'MaiorNumero.class.php';
 			
-			$maiorNumero = new Maior();
+			$maiorNumero = new MaiorNumero();
 			
 			$maiorNumero->setPrimeiroNumero($_POST['txtNum1']);
 			$maiorNumero->setSegundoNumero($_POST['txtNum2']);
@@ -19,6 +19,9 @@
 			
 			
 			echo "O maior número é: ". $maiorNumero->calcularMaiorNumero(). "<br>";
+			echo $numeroMenor."<br>";
+			echo $numeroMedio."<br>";
+			echo $numeroMaior."<br>";
 
 		?>
 		

@@ -13,11 +13,7 @@
 			
 			$numeros = new Numeros();
 			
-			$numeros->setPrimeiroNumero($_POST['txtNumero1']);
-			$numeros->setSegundoNumero($_POST['txtNumero2']);
-			$numeros->setTerceiroNumero($_POST['txtNumero3']);
-			$numeros->setQuartoNumero$_POST['txtNumero4']);
-			$numeros->setQuintoNumero($_POST['txtNumero5']);
+			$numeros->setNumeros($_POST['txtNumero']);
 			
 			echo "A soma dos números é " .$numeros->calcularSoma "<br>";
 			echo "A média dos números digitados é " .$numeros->calcularMedia(). "<br>";

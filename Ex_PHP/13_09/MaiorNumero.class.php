@@ -11,14 +11,14 @@
 		<?php
 			class Maior {
 				
-				private $primeiroNumero;
-				private $segundoNumero;
-				private $terceiroNumero;
-				$numeroMenor = 0;
-				$numeroMedio = 0;
-				$numeroMaior = 0;
+				private $primeiroNumero = 0;
+				private $segundoNumero = 0;
+				private $terceiroNumero = 0;
+				private $numeroMenor = 0;
+				private $numeroMedio = 0;
+				private $numeroMaior = 0;
 				
-				public function Maior(){
+				public function MaiorNumero(){
 				
 				}
 				
@@ -26,8 +26,8 @@
 					return $this->primeiroNumero;
 				}
 				
-				public function setPrimeiroNumero($primeiraNumero){
-					$this->primeiroNumero = $primeiraNumero;
+				public function setPrimeiroNumero($primeiroNumero){
+					$this->primeiroNumero = $primeiroNumero;
 				}
 				
 				public function getSegundoNumero(){
@@ -47,24 +47,42 @@
 				}
 				
 				function calcularMaiorNumero(){
+					if(isset($_GET['txtNum1'])){
+						$primeiroNumero = $_GET['txtNum1'];
+						$segundoNumero = $_GET['txtNum2'];
+						$terceiroNumero = $_GET['txtNum3'];
 					if($this->primeiroNumero > $this->segundoNumero && $this->primeiroNumero > $this->terceiroNumero){
 						$numeroMaior = $primeiroNumero;
-						if($this->segundoNumero > $this->terceiroNumero){
-							$numeroMenor = $terceiroNumero;
-							$numeroMedio = $segundoNumero;
-						}else{
-							$numeroMenor = $segundoNumero;
+						if($this->segundoNumero < $this->terceiroNumero){
 							$numeroMedio = $terceiroNumero;
+							$numeroMenor = $segundoNumero;
+						}else{
+							$numeroMedio = $segundoNumero;
+							$numeroMenor = $terceiroNumero;
 						}
 					}
-					}else if($this->segundoNumero > $this->primeiroNumero && $this->segundoNumero > $this->terceiroNumero){
+					if($this->segundoNumero > $this->primeiroNumero && $this->segundoNumero > $this->terceiroNumero){
 						$numeroMaior = $segundoNumero;
-					}else if($this->terceiroNumero > $this->primeiroNumero && $this-terceiroNumero > $this->segundoNumero){
+						if($this->primeiroNumero < $this->terceiroNumero){
+							$numeroMedio = $terceiroNumero;
+							$numeroMenor = $primeiroNumero;
+						}else{
+							$numeroMedio = $primeiroNumero;
+							$numeroMenor = $terceiroNumero;
+						}
+					}
+					if($this->terceiroNumero > $this->primeiroNumero && $this->terceiroNumero > $this->segundoNumero){
 						$numeroMaior = $terceiroNumero;
+						if($this->primeiroNumero < $this->segundoNumero){
+							$numeroMedio = $segundoNumero;
+							$numeroMenor = $primeiroNumero;
+						}else{
+							$numeroMedio = $primeiroNumero;
+							$numeroMenor = $segundoNumero;
+						}
+					}
 					}
 					
-					return ($numeroMaior);
-					echo $numeroMaior
 				}
 			}
 		?>
