@@ -37,8 +37,8 @@
 			</thead>
 			<tbody>
 				<?php
-					$consulta = mysql_query("SELECT * FROM produto");
-					while($campo = mysql_fetch_array($consulta)){
+					$consulta = @mysqli_query("SELECT * FROM produto");
+					while($campo = @mysqli_fetch_array($consulta)){
 				?>
 				<tr>
 					<td>

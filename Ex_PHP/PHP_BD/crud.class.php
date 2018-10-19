@@ -9,17 +9,17 @@
 		private $sql_del = "";
 		private $tabela = "";
 		
-		public function__construct($tabela){
+		public function __construct($tabela){
 			$this->tabela = $tabela;
 			return $this->tabela;
 		}
 		
 		public function inserir($campos, $valores){
-			$this->sql_ins = "INSERT INTO" .$this->tabela."
-			if(!$this->sql_ins = @mysql_query($this->sql_ins)){
-				die("Erro na inclusão".'<br> Linha: '.__LINE__."<br>".@sql_error()."<br><a href = 'index.php'> Voltar ao Menu </a>);
+			$this->sql_ins = "INSERT INTO" .$this->tabela." ($campos) VALUES ($valores)";
+			if(!$this->sql_ins = mysqli_query($this->sql_ins)){
+				die("Erro na inclusão".'<br> Linha: '.__LINE__."<br>".mysqli_error()."<br><a href='index.php'> Voltar ao Menu </a>");
 			}else{
-				print "<script> location = 'index.php';</script>;
+				print "<script> location = 'index.php';</script>";
 			}
 		}
 		
@@ -30,10 +30,10 @@
 				$this->sql_upd = "UPDATE " .$this->tabela. " SET $camposValores";
 			}
 			
-			if(!$this->sql_upd = @mysql_query($this->sql_upd)){
-				die("Erro na atualização"."<br>" Linha: ".__LINE__."<br>".@mysql_error()."<br><a href='index.php'> Voltar ao Menu </a>");
+			if(!$this->sql_upd = @mysqli_query($this->sql_upd)){
+				die("Erro na atualização"."<br> Linha: ".__LINE__."<br>".@mysqli_error()."<br><a href='index.php'> Voltar ao Menu </a>");
 			}else{
-				print "Registro atualizado com sucesso! <br><a href = 'index.php'> Voltar ao Menu </a>);
+				print "Registro atualizado com sucesso! <br><a href = 'index.php'> Voltar ao Menu </a>";
 			}
 		}
 		
@@ -42,17 +42,17 @@
 				$this->sql_sel = "SELECT * FROM ".
 				$this->tabela. "WHERE $where";
 				$this->sql_del = "DELETE FROM ".$this->tabela.
-					"WHERE $where;
+					"WHERE $where";
 			}else{
 				$this->sql_sel = "SELECT * FROM " .$this->tabela;
 				$this->sql_del = "DELETE FROM ".$this->tabela;
 			}
-			$sel = @mysql_query($this->sql_sel);
-			$regs = mysql_num_rows($sel);
+			$sel = mysqli_query($this->sql_sel);
+			$regs = mysqli_num_rows($sel);
 			
 			if($regs > 0){
-				if(!this->del = mysql_query($this->sql_del)){
-					die("Erro na exclusão ".'<br> Linha: '.__LINE__. "<br>".mysql_error(). "<br><a href = 'index.php'> Voltar ao Menu </a>");
+				if(!$this->del = mysqli_query($this->sql_del)){
+					die("Erro na exclusão ".'<br> Linha: '.__LINE__. "<br>".mysqli_error(). "<br><a href = 'index.php'> Voltar ao Menu </a>");
 				}else{
 					print "Registro excluído com sucesso!<br><a href = 'index.php'> Voltar ao Menu </a>";
 				}
