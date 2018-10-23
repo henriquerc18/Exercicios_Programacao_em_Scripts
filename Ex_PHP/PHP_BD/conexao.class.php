@@ -5,7 +5,7 @@
 	class Conexao {
 		private $db_host = 'localhost';
 		private $db_user = 'root';
-		private $db_pass = '';
+		private $db_pass = 'amazingday250193';
 		private $db_name = 'crud_final';
 		
 
@@ -14,7 +14,7 @@
 		public function connect(){
 		
 			if(!$this->conn){
-				$myconn = @mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+				$myconn = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
 				if($myconn){
 					$seldb = @mysqli_select_db($this->db_name);
 					if($seldb){

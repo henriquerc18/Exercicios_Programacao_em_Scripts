@@ -10,8 +10,8 @@
 	
 	@$getId = $_GET['id'];
 	if($getId){
-		$consulta = mysql_query("SELECT * FROM produto WHERE id = + $getId");
-		$campo = @mysql_fetch_array($consulta);
+		$consulta = @mysqli_query("SELECT * FROM produto WHERE id = + $getId");
+		$campo = @mysqli_fetch_array($consulta);
 	}if(isset($_POST['Cadastrar'])){
 		$nome = $_POST['nome'];
 		$descricao = $_POST['descricao'];
@@ -41,7 +41,7 @@
 			<label> Descrição: </label>
 			<input type="text" name="descricao" value="<?php echo @$campo['descricao']; ?>" />
 			<?php
-				if(@!campo['id']){
+				if(@!$campo['id']){
 			?>
 			<input type="submit" name="Cadastrar" value="Cadastrar" />
 			<?php }else{ ?>

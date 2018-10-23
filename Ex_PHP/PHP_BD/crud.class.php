@@ -16,8 +16,8 @@
 		
 		public function inserir($campos, $valores){
 			$this->sql_ins = "INSERT INTO" .$this->tabela." ($campos) VALUES ($valores)";
-			if(!$this->sql_ins = mysqli_query($this->sql_ins)){
-				die("Erro na inclusão".'<br> Linha: '.__LINE__."<br>".mysqli_error()."<br><a href='index.php'> Voltar ao Menu </a>");
+			if(!$this->sql_ins = @mysqli_query($this->sql_ins)){
+				die("Erro na inclusão".'<br> Linha: '.__LINE__."<br>".@mysqli_errno()."<br><a href='index.php'> Voltar ao Menu </a>");
 			}else{
 				print "<script> location = 'index.php';</script>";
 			}
@@ -31,7 +31,7 @@
 			}
 			
 			if(!$this->sql_upd = @mysqli_query($this->sql_upd)){
-				die("Erro na atualização"."<br> Linha: ".__LINE__."<br>".@mysqli_error()."<br><a href='index.php'> Voltar ao Menu </a>");
+				die("Erro na atualização"."<br> Linha: ".__LINE__."<br>".@mysqli_errno()."<br><a href='index.php'> Voltar ao Menu </a>");
 			}else{
 				print "Registro atualizado com sucesso! <br><a href = 'index.php'> Voltar ao Menu </a>";
 			}
@@ -52,7 +52,7 @@
 			
 			if($regs > 0){
 				if(!$this->del = mysqli_query($this->sql_del)){
-					die("Erro na exclusão ".'<br> Linha: '.__LINE__. "<br>".mysqli_error(). "<br><a href = 'index.php'> Voltar ao Menu </a>");
+					die("Erro na exclusão ".'<br> Linha: '.__LINE__. "<br>".mysqli_errno(). "<br><a href = 'index.php'> Voltar ao Menu </a>");
 				}else{
 					print "Registro excluído com sucesso!<br><a href = 'index.php'> Voltar ao Menu </a>";
 				}
