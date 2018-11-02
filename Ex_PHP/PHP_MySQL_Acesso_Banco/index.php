@@ -3,7 +3,7 @@
 
 
 
-<DOCTYPE html>
+<!DOCTYPE html>
 	<html>
 		<head>
 			<title> Teste de validação DEVMEDIA </title>

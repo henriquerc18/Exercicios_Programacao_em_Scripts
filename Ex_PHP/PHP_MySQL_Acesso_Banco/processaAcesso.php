@@ -1,6 +1,6 @@
 <?php
 	namespace processaAcesso{
-		include 'conexao/mysql.php';
+		include 'mysql.php';
 		
 		use Mysql as Mysql;
 		
@@ -8,8 +8,8 @@
 			
 			var $db;
 			
-			public function__construct(){
-				$conexao = new mysql(DB_SERVER, DB_NAME, DB_USERNAME, DB_PASSWORD);
+			public function __construct(){
+				$conexao = new Mysql\mysql(DB_SERVER, DB_NAME, DB_USERNAME, DB_PASSWORD);
 				$this->db = $conexao;
 			}
 			

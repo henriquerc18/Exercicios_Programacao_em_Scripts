@@ -9,7 +9,7 @@
 			
 			var $db, $conn;
 			
-			public function__construct($server, $database, $username, $password);
+			public function __construct($server, $database, $username, $password){
 				$this->conn = @mysql_connect($server, $username, $password);
 				$this->db = @mysql_select_db($database, $this->conn);
 			}
@@ -29,11 +29,11 @@
 					$insertvalues[] = '\'' . $value . '\'';
 				}
 				$keys = implode(',', $keys);
-				$insertvalues= implode(',', $insertvalues);
+				$insertvalues = implode(',', $insertvalues);
 				
 				$sql = "INSERT INTO $tabela ($keys) VALUES ($insertvalues)";
 				
-				$return $this->executar($sql);
+				return $this->executar($sql);
 			}
 			
 			private function executar($sql){

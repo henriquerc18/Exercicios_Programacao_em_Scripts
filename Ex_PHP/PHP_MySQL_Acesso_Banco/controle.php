@@ -2,10 +2,10 @@
 	namespace controle{
 		include 'processaAcesso.php';
 		
-		$controle = new ProcessaAcesso;
+		$controle = new \processaAcesso\ProcessaAcesso;
 		if(@$_POST['enviar']){
 			$login = $_POST['login'];
-			$senha = md5 ($_POST['senha'];
+			$senha = md5 ($_POST['senha']);
 			$usuario = $controle->verificaAcesso($login, $senha);
 			
 			if($usuario[0]['id_tipo_acesso'] == 1){
@@ -14,6 +14,7 @@
 				header("Location: pagina2.html");
 			}else{
 				header("Location: pagina3.html");
+			}
 		}else if($_POST['cadastrar']){
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
@@ -25,7 +26,7 @@
 				$tipo_acesso = $controle->verificaAcesso($login, $senha);
 				if($tipo_acesso[0]['id_tipo_acesso'] == 1){
 					header("Location: pagina1.html");
-				}else if($tipo_acesso{
+				}else if($tipo_acesso[0]['id_tipo_acesso'] == 2){
 					header("Location: pagina2.html");
 				}
 			}
